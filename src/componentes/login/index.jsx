@@ -14,7 +14,7 @@ function Login() {
     setError(null)
 
     const { error } = await supabase.auth.signInWithPassword({
-      email: correo,
+      email: correo.trim(),
       password,
     })
 
